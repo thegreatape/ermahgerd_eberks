@@ -1,0 +1,21 @@
+!!!
+%html{'ng-app' => ''}
+  %head
+    %title Ermahgerd, Eberks!
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %h1 Ermahgerd, Eberks!
+
+    %div{'ng-controller' => 'BooksCtrl'}
+      %form
+        %input{type: "text", "ng-model" => "searchTerms"}
+
+      %table
+        %tr{'ng-repeat' => 'book in books | filter: searchTerms'}
+          %td {{book.title}}
+          %td {{book.author}}
+          %td
+            %a{target: "_blank", "ng-href" => "{{book.link}}"} Open
+
