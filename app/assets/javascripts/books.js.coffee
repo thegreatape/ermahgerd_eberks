@@ -1,4 +1,6 @@
-@BooksCtrl = ($scope) =>
+@app = angular.module("ermagerd-eberks", [])
+
+@app.controller "BooksCtrl", ["$scope", ($scope) ->
   $scope.books = [{
       title: "Gone Girl",
       author: "Gillian Flynn",
@@ -12,3 +14,4 @@
       author: "John Grisham",
       link: "http://digital.minlib.net/5BCFCE90-489E-4FC4-BB83-F9EE12D1250C/10/50/en/ContentDetails.htm?id=39FF0AEE-B40F-4693-9586-2F5157A3E4DC"
     }]
+]
