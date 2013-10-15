@@ -13,9 +13,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'haml-rails'
 gem 'byebug'
 
-# Assets
-gem 'rails-assets-angular'
+gem 'teaspoon'
+gem 'phantomjs'
 
-# Only for tests
+gem 'rails-assets-angular'
 gem 'rails-assets-angular-mocks'
 gem 'rails-assets-angular-scenario'
